@@ -1,0 +1,368 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<header class="site-header">
+		<nav class="page-shell nav" aria-label="Main navigation">
+			<a class="brand" href="#top" aria-label="NanoScripts home">
+				<span class="brand-mark" aria-hidden="true">
+					<svg viewBox="0 0 32 32" fill="none">
+						<path d="M7 23V9h4l10 14V9h4v14h-4L11 9v14H7Z" fill="currentColor" />
+					</svg>
+				</span>
+				<span>NanoScripts</span>
+			</a>
+
+			<div class="nav-actions">
+				<label class="sr-only" for="language" data-i18n="nav.languageLabel">Choose language</label>
+				<select
+					id="language"
+					class="language-select"
+					aria-label="Choose language"
+					data-i18n-aria-label="nav.languageLabel"
+				>
+					<option value="en">EN</option>
+					<option value="ru">RU</option>
+					<option value="zh">ZH</option>
+				</select>
+				<button
+					id="theme-toggle"
+					class="theme-toggle"
+					type="button"
+					aria-label="Switch to dark mode"
+					title="Switch to dark mode"
+					data-i18n-aria-label="theme.toDark"
+					data-i18n-title="theme.toDark"
+				>
+					<svg class="sun-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+						<circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7" />
+						<path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+					</svg>
+					<svg class="moon-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+						<path d="M20.2 15.1A8.4 8.4 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+					</svg>
+				</button>
+				<a class="nav-contact" href="#contact" data-i18n="nav.contact">Contact</a>
+			</div>
+		</nav>
+	</header>
+
+	<main id="top">
+		<section class="hero-section">
+			<div class="page-shell hero-grid">
+				<div class="hero-copy">
+					<p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="hero.eyebrow">Automated QA infrastructure</span></p>
+					<h1 data-i18n="hero.title">We build automated test suites for your web application.</h1>
+					<p class="hero-description" data-i18n="hero.description">
+						We write Playwright test scripts, containerize the environment with Docker, and integrate the execution into your GitHub Actions. Catch bugs before deployment without doing manual QA.
+					</p>
+					<div class="hero-actions">
+						<a class="button button-primary transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500" href="#contact">
+							<span data-i18n="hero.cta">Request a free visual QA audit</span>
+							<svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+								<path d="M4.5 10h11m-4.5-4.5L15.5 10 11 14.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</a>
+						<span class="hero-note" data-i18n="hero.note">No obligation. A clear review of your staging workflows.</span>
+					</div>
+					<div class="hero-meta" aria-label="Tools used">
+						<span>Playwright</span><span class="meta-separator"></span><span>Docker</span><span class="meta-separator"></span><span>GitHub Actions</span>
+					</div>
+				</div>
+
+				<div class="pipeline-card" aria-label="Example automated test workflow">
+					<div class="pipeline-topbar">
+						<div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+						<span data-i18n="hero.previewLabel">test run / chromium</span>
+						<svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+							<path d="M8 4H5.5A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16h9a1.5 1.5 0 0 0 1.5-1.5V12m-7-8h7v7m0-7-8 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<div class="pipeline-content">
+						<div class="run-heading">
+							<div>
+								<p class="run-kicker" data-i18n="hero.runLabel">LATEST RUN</p>
+								<p class="run-title" data-i18n="hero.runTitle">Pull request #248</p>
+							</div>
+							<span class="status-pill"><span></span><span data-i18n="hero.passed">Passed</span></span>
+						</div>
+						<div class="run-divider"></div>
+						<div class="run-summary">
+							<span><strong>10</strong> <span data-i18n="hero.testsPassed">tests passed</span></span>
+							<span class="run-duration">01:24</span>
+						</div>
+						<div class="test-list">
+							<div class="test-row">
+								<span class="test-check">✓</span>
+								<span data-i18n="hero.testOne">sign in with valid credentials</span>
+								<span class="test-time">1.2s</span>
+							</div>
+							<div class="test-row">
+								<span class="test-check">✓</span>
+								<span data-i18n="hero.testTwo">complete checkout flow</span>
+								<span class="test-time">4.8s</span>
+							</div>
+							<div class="test-row">
+								<span class="test-check">✓</span>
+								<span data-i18n="hero.testThree">update account settings</span>
+								<span class="test-time">2.1s</span>
+							</div>
+						</div>
+						<div class="pipeline-footer">
+							<span class="docker-icon" aria-hidden="true">▰</span>
+							<span data-i18n="hero.containerLabel">Executed in a Docker container</span>
+							<span class="container-status" aria-hidden="true"></span>
+						</div>
+					</div>
+					<div class="pipeline-glow" aria-hidden="true"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="proof-section section-pad" aria-labelledby="proof-title">
+			<div class="page-shell">
+				<div class="section-heading centered-heading">
+					<p class="section-label"><span>01</span><span data-i18n="proof.label">Proof of work</span></p>
+					<h2 id="proof-title" data-i18n="proof.title">A test run, from start to finish.</h2>
+				</div>
+				<div class="video-frame" role="img" aria-label="Illustration of Playwright UI tests running through Docker" data-i18n-aria-label="proof.videoAlt">
+					<div class="video-toolbar">
+						<div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+						<div class="video-tab"><span class="tab-file-icon">{ }</span> checkout.spec.ts</div>
+						<div class="video-toolbar-right"><span></span><span></span><span></span></div>
+					</div>
+					<div class="video-scene">
+						<div class="code-panel" aria-hidden="true">
+							<div><span class="line-number">1</span><code><b>test</b>(<em>'checkout flow'</em>, <i>async</i> ({'{ page }'}) =&gt; {'{'}</code></div>
+							<div><span class="line-number">2</span><code>  <i>await</i> page.goto(<em>'/products'</em>);</code></div>
+							<div><span class="line-number">3</span><code>  <i>await</i> page.getByRole(<em>'button'</em>, {'{'}</code></div>
+							<div><span class="line-number">4</span><code>    name: <em>'Add to cart'</em></code></div>
+							<div><span class="line-number">5</span><code>  {'}'}).click();</code></div>
+							<div><span class="line-number">6</span><code>  <i>await</i> expect(page).toHaveURL(<em>/checkout/</em>);</code></div>
+							<div><span class="line-number">7</span><code>{'}'});</code></div>
+							<div class="code-cursor" aria-hidden="true"></div>
+						</div>
+						<div class="browser-panel" aria-hidden="true">
+							<div class="browser-address"><span></span>localhost:3000/checkout</div>
+							<div class="browser-content">
+								<div class="browser-brand"></div>
+								<div class="browser-title"></div>
+								<div class="browser-product">
+									<div class="product-image"><span></span></div>
+									<div class="product-copy"><i></i><i></i><i></i></div>
+								</div>
+								<div class="browser-button"></div>
+							</div>
+						</div>
+						<div class="recording-badge"><span></span><span data-i18n="proof.recording">Test execution</span></div>
+						<div class="play-button" aria-hidden="true">
+							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.8c0-.8.9-1.3 1.6-.9l9.1 5.2a1 1 0 0 1 0 1.8l-9.1 5.2c-.7.4-1.6-.1-1.6-.9V5.8Z" /></svg>
+						</div>
+					</div>
+					<div class="video-controls" aria-hidden="true">
+						<span class="control-play"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M6.5 4.8c0-.6.7-.9 1.2-.6l7 4.2a.7.7 0 0 1 0 1.2l-7 4.2c-.5.3-1.2 0-1.2-.6V4.8Z" /></svg></span>
+						<span class="video-progress"><i></i></span>
+						<span class="video-time">00:18 / 01:24</span>
+						<svg class="video-volume" viewBox="0 0 20 20" fill="none"><path d="M3 8v4h3l4 3V5L6 8H3Zm10-1a4 4 0 0 1 0 6m2-8a7 7 0 0 1 0 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+						<span class="video-expand">⛶</span>
+					</div>
+				</div>
+				<p class="video-caption"><span class="caption-line"></span><span data-i18n="proof.caption">Standard execution: Playwright UI tests running via Docker.</span></p>
+			</div>
+		</section>
+
+		<section class="process-section section-pad" id="process" aria-labelledby="process-title">
+			<div class="page-shell">
+				<div class="section-heading">
+					<p class="section-label"><span>02</span><span data-i18n="process.label">How it works</span></p>
+					<h2 id="process-title" data-i18n="process.title">A straightforward setup, in three steps.</h2>
+					<p class="section-intro" data-i18n="process.intro">From choosing the right workflows to running tests on every pull request.</p>
+				</div>
+				<div class="steps-grid">
+					<article class="step-card">
+						<div class="step-top"><span class="step-number">01</span><span class="step-icon audit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.6" /><path d="m16 16 4.5 4.5M8 11l1.8 1.8 3.8-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span></div>
+						<h3 data-i18n="process.stepOneTitle">Visual Audit</h3>
+						<p data-i18n="process.stepOneBody">We review your staging environment and identify testable workflows.</p>
+					</article>
+					<article class="step-card">
+						<div class="step-top"><span class="step-number">02</span><span class="step-icon code-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-2-13-4 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span></div>
+						<h3 data-i18n="process.stepTwoTitle">Script &amp; Containerize</h3>
+						<p data-i18n="process.stepTwoBody">We write the Playwright code and package it in a Docker image.</p>
+					</article>
+					<article class="step-card">
+						<div class="step-top"><span class="step-number">03</span><span class="step-icon ci-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 7h10m0 0-3-3m3 3-3 3M17 17H7m0 0 3-3m-3 3 3 3M5 10v4m14-4v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span></div>
+						<h3 data-i18n="process.stepThreeTitle">CI/CD Integration</h3>
+						<p data-i18n="process.stepThreeBody">We connect the tests to run automatically on your pull requests.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="pricing-section section-pad" id="services" aria-labelledby="pricing-title">
+			<div class="page-shell">
+				<div class="section-heading">
+					<p class="section-label"><span>03</span><span data-i18n="pricing.label">Service tiers</span></p>
+					<h2 id="pricing-title" data-i18n="pricing.title">Choose how you want to maintain it.</h2>
+					<p class="section-intro" data-i18n="pricing.intro">Both options include a working test setup and full access to the code.</p>
+				</div>
+				<div class="pricing-grid">
+					<article class="price-card">
+						<div class="price-card-heading">
+							<span class="plan-index">01 / HANDOFF</span>
+							<span class="plan-mark" aria-hidden="true">N.</span>
+						</div>
+						<h3 data-i18n="pricing.checkupTitle">Nano CheckUp (Asset Handoff)</h3>
+						<p class="plan-description" data-i18n="pricing.checkupDescription">We build the infrastructure and hand it over to your team.</p>
+						<div class="deliverables-label" data-i18n="pricing.deliverables">Deliverables</div>
+						<ul class="deliverables-list">
+							<li><span class="list-check">✓</span><span data-i18n="pricing.checkupItemOne">10 core automated tests</span></li>
+							<li><span class="list-check">✓</span><span data-i18n="pricing.checkupItemTwo">Dockerfile</span></li>
+							<li><span class="list-check">✓</span><span data-i18n="pricing.checkupItemThree">GitHub Actions configuration</span></li>
+							<li><span class="list-check">✓</span><span data-i18n="pricing.checkupItemFour">Full repository ownership</span></li>
+						</ul>
+						<a class="button button-secondary transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500" href="#contact"><span data-i18n="pricing.askAbout">Ask about this service</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.5 10h11m-4.5-4.5L15.5 10 11 14.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+					</article>
+					<article class="price-card managed-card">
+						<div class="price-card-heading">
+							<span class="plan-index" data-i18n="pricing.managedPlan">02 / MAINTAINED</span>
+							<span class="plan-mark" aria-hidden="true">N<span>+</span></span>
+						</div>
+						<h3 data-i18n="pricing.guardsTitle">Nano Guards (Fully Managed)</h3>
+						<p class="plan-description" data-i18n="pricing.guardsDescription">We build the infrastructure and maintain it when your UI changes.</p>
+						<div class="deliverables-label" data-i18n="pricing.deliverables">Deliverables</div>
+						<ul class="deliverables-list">
+							<li><span class="list-check">✓</span><span data-i18n="pricing.guardsItemOne">Everything in CheckUp</span></li>
+							<li class="managed-deliverable"><span class="list-check">✓</span><span data-i18n="pricing.guardsItemTwo">We fix broken UI selectors within 24 hours of a test failure.</span></li>
+						</ul>
+						<a class="button button-primary plan-primary" href="#contact"><span data-i18n="pricing.askAbout">Ask about this service</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.5 10h11m-4.5-4.5L15.5 10 11 14.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+					</article>
+				</div>
+				<p class="pricing-note" data-i18n="pricing.note">Pricing depends on the application and the workflows to be covered. Contact us for a scoped estimate.</p>
+			</div>
+		</section>
+
+		<section class="contact-section" id="contact" aria-labelledby="contact-title">
+			<div class="page-shell contact-inner">
+				<div>
+					<p class="section-label contact-label"><span>04</span><span data-i18n="contact.label">Get in touch</span></p>
+					<h2 id="contact-title" data-i18n="contact.title">Start with a look at your staging environment.</h2>
+					<p data-i18n="contact.description">Send a link and a short note about your application. We’ll review testable workflows and get back to you.</p>
+				</div>
+				<a class="button contact-button transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500" href="https://tally.so/r/Eq5e1o">
+					<span data-i18n="contact.cta">Request a free visual QA audit</span>
+					<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.5 10h11m-4.5-4.5L15.5 10 11 14.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+				</a>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="page-shell footer-inner">
+			<a class="brand footer-brand" href="#top">
+				<span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M7 23V9h4l10 14V9h4v14h-4L11 9v14H7Z" fill="currentColor" /></svg></span>
+				<span>NanoScripts</span>
+			</a>
+			<p class="footer-note" data-i18n="footer.note">Automated QA infrastructure, set up for your team.</p>
+			<div class="footer-links" aria-label="Social and contact links" data-i18n-aria-label="footer.linksLabel">
+				<a href="https://github.com" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+				<a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+				<a href="mailto:hello@nanoscripts.io">Email <span aria-hidden="true">↗</span></a>
+			</div>
+			<span class="copyright">© <span id="current-year">2026</span> NanoScripts</span>
+		</div>
+	</footer>
+</Layout>
+
+<script>
+	import { translations, type Language } from '../i18n';
+
+	const languageSelect = document.querySelector<HTMLSelectElement>('#language');
+	const themeButton = document.querySelector<HTMLButtonElement>('#theme-toggle');
+	const currentYear = document.querySelector<HTMLElement>('#current-year');
+	const languageStorageKey = 'nanoscripts-language';
+	const themeStorageKey = 'nanoscripts-theme';
+
+	function applyLanguage(language: Language) {
+		const copy = translations[language];
+		document.documentElement.lang = language;
+
+		document.querySelectorAll<HTMLElement>('[data-i18n]').forEach((element) => {
+			const key = element.dataset.i18n;
+			if (key && key in copy) {
+				element.textContent = copy[key as keyof typeof copy];
+			}
+		});
+
+		document.querySelectorAll<HTMLElement>('[data-i18n-aria-label]').forEach((element) => {
+			const key = element.dataset.i18nAriaLabel;
+			if (key && key in copy) {
+				element.setAttribute('aria-label', copy[key as keyof typeof copy]);
+			}
+		});
+
+		document.querySelectorAll<HTMLElement>('[data-i18n-title]').forEach((element) => {
+			const key = element.dataset.i18nTitle;
+			if (key && key in copy) {
+				element.setAttribute('title', copy[key as keyof typeof copy]);
+			}
+		});
+
+		if (languageSelect) languageSelect.value = language;
+	}
+
+	function applyTheme(isDark: boolean) {
+		document.documentElement.classList.toggle('dark', isDark);
+		const language = languageSelect?.value as Language | undefined;
+		const copy = translations[language ?? 'en'];
+		const label = isDark ? copy['theme.toLight'] : copy['theme.toDark'];
+
+		themeButton?.setAttribute('aria-label', label);
+		themeButton?.setAttribute('title', label);
+	}
+
+	if (currentYear) currentYear.textContent = String(new Date().getFullYear());
+
+	let initialLanguage: Language = 'en';
+	try {
+		const storedLanguage = localStorage.getItem(languageStorageKey);
+		if (storedLanguage === 'en' || storedLanguage === 'ru' || storedLanguage === 'zh') {
+			initialLanguage = storedLanguage;
+		}
+	} catch (error) {
+		console.warn('Unable to read the saved language preference.', error);
+	}
+	applyLanguage(initialLanguage);
+
+	let initialDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	try {
+		const storedTheme = localStorage.getItem(themeStorageKey);
+		if (storedTheme === 'dark' || storedTheme === 'light') {
+			initialDark = storedTheme === 'dark';
+		}
+	} catch (error) {
+		console.warn('Unable to read the saved theme preference.', error);
+	}
+	applyTheme(initialDark);
+
+	languageSelect?.addEventListener('change', () => {
+		const language = languageSelect.value as Language;
+		applyLanguage(language);
+		try {
+			localStorage.setItem(languageStorageKey, language);
+		} catch (error) {
+			console.warn('Unable to save the language preference.', error);
+		}
+		applyTheme(document.documentElement.classList.contains('dark'));
+	});
+
+	themeButton?.addEventListener('click', () => {
+		const isDark = !document.documentElement.classList.contains('dark');
+		applyTheme(isDark);
+		try {
+			localStorage.setItem(themeStorageKey, isDark ? 'dark' : 'light');
+		} catch (error) {
+			console.warn('Unable to save the theme preference.', error);
+		}
+	});
+</script>
