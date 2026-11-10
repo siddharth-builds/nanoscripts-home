@@ -22,7 +22,6 @@ type Copy = {
 	'proof.label': string;
 	'proof.title': string;
 	'proof.videoAlt': string;
-	'proof.recording': string;
 	'proof.caption': string;
 	'process.label': string;
 	'process.title': string;
@@ -81,9 +80,8 @@ export const translations = {
 		'hero.containerLabel': 'Executed in a Docker container',
 		'proof.label': 'Proof of work',
 		'proof.title': 'A test run, from start to finish.',
-		'proof.videoAlt': 'Illustration of Playwright UI tests running through Docker',
-		'proof.recording': 'UI preview · illustration',
-		'proof.caption': 'Standard execution: Playwright UI tests running via Docker.',
+		'proof.videoAlt': 'NanoScripts proof of work video',
+		'proof.caption': 'Watch our proof of work.',
 		'process.label': 'How it works',
 		'process.title': 'A straightforward setup, in three steps.',
 		'process.intro': 'From choosing the right workflows to running tests on every pull request.',
@@ -139,9 +137,8 @@ export const translations = {
 		'hero.containerLabel': 'Запуск в контейнере Docker',
 		'proof.label': 'Пример работы',
 		'proof.title': 'Запуск теста от начала до конца.',
-		'proof.videoAlt': 'Иллюстрация запуска UI-тестов Playwright в Docker',
-		'proof.recording': 'Иллюстрация интерфейса',
-		'proof.caption': 'Стандартный запуск: UI-тесты Playwright в Docker.',
+		'proof.videoAlt': 'Видео с примерами работы NanoScripts',
+		'proof.caption': 'Посмотрите примеры нашей работы.',
 		'process.label': 'Как это работает',
 		'process.title': 'Настройка в три понятных шага.',
 		'process.intro': 'От выбора сценариев до запуска тестов при каждом pull request.',
@@ -197,9 +194,8 @@ export const translations = {
 		'hero.containerLabel': '在 Docker 容器中运行',
 		'proof.label': '工作示例',
 		'proof.title': '完整展示一次测试运行。',
-		'proof.videoAlt': 'Playwright UI 测试通过 Docker 运行的示意图',
-		'proof.recording': '界面示意图',
-		'proof.caption': '标准运行方式：通过 Docker 运行 Playwright UI 测试。',
+		'proof.videoAlt': 'NanoScripts 工作示例视频',
+		'proof.caption': '观看我们的工作示例。',
 		'process.label': '工作流程',
 		'process.title': '三个步骤完成基础设施配置。',
 		'process.intro': '从选择合适的工作流程，到在每个 pull request 上运行测试。',

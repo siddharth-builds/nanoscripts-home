@@ -580,6 +580,13 @@ p {
 	color: #d7dfeb;
 }
 
+.youtube-embed {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	border: 0;
+}
+
 .video-toolbar {
 	display: flex;
 	height: 42px;

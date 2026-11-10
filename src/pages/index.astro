@@ -126,49 +126,19 @@ import Layout from '../layouts/Layout.astro';
 					<p class="section-label"><span>01</span><span data-i18n="proof.label">Proof of work</span></p>
 					<h2 id="proof-title" data-i18n="proof.title">A test run, from start to finish.</h2>
 				</div>
-				<div class="video-frame" role="img" aria-label="Illustration of Playwright UI tests running through Docker" data-i18n-aria-label="proof.videoAlt">
-					<div class="video-toolbar">
-						<div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
-						<div class="video-tab"><span class="tab-file-icon">{ }</span> checkout.spec.ts</div>
-						<div class="video-toolbar-right"><span></span><span></span><span></span></div>
-					</div>
-					<div class="video-scene">
-						<div class="code-panel" aria-hidden="true">
-							<div><span class="line-number">1</span><code><b>test</b>(<em>'checkout flow'</em>, <i>async</i> ({'{ page }'}) =&gt; {'{'}</code></div>
-							<div><span class="line-number">2</span><code>  <i>await</i> page.goto(<em>'/products'</em>);</code></div>
-							<div><span class="line-number">3</span><code>  <i>await</i> page.getByRole(<em>'button'</em>, {'{'}</code></div>
-							<div><span class="line-number">4</span><code>    name: <em>'Add to cart'</em></code></div>
-							<div><span class="line-number">5</span><code>  {'}'}).click();</code></div>
-							<div><span class="line-number">6</span><code>  <i>await</i> expect(page).toHaveURL(<em>/checkout/</em>);</code></div>
-							<div><span class="line-number">7</span><code>{'}'});</code></div>
-							<div class="code-cursor" aria-hidden="true"></div>
-						</div>
-						<div class="browser-panel" aria-hidden="true">
-							<div class="browser-address"><span></span>localhost:3000/checkout</div>
-							<div class="browser-content">
-								<div class="browser-brand"></div>
-								<div class="browser-title"></div>
-								<div class="browser-product">
-									<div class="product-image"><span></span></div>
-									<div class="product-copy"><i></i><i></i><i></i></div>
-								</div>
-								<div class="browser-button"></div>
-							</div>
-						</div>
-						<div class="recording-badge"><span></span><span data-i18n="proof.recording">Test execution</span></div>
-						<div class="play-button" aria-hidden="true">
-							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.8c0-.8.9-1.3 1.6-.9l9.1 5.2a1 1 0 0 1 0 1.8l-9.1 5.2c-.7.4-1.6-.1-1.6-.9V5.8Z" /></svg>
-						</div>
-					</div>
-					<div class="video-controls" aria-hidden="true">
-						<span class="control-play"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M6.5 4.8c0-.6.7-.9 1.2-.6l7 4.2a.7.7 0 0 1 0 1.2l-7 4.2c-.5.3-1.2 0-1.2-.6V4.8Z" /></svg></span>
-						<span class="video-progress"><i></i></span>
-						<span class="video-time">00:18 / 01:24</span>
-						<svg class="video-volume" viewBox="0 0 20 20" fill="none"><path d="M3 8v4h3l4 3V5L6 8H3Zm10-1a4 4 0 0 1 0 6m2-8a7 7 0 0 1 0 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
-						<span class="video-expand">⛶</span>
-					</div>
+				<div class="video-frame">
+					<iframe
+						class="youtube-embed"
+						src="https://www.youtube.com/embed/6b72GsbW_Ec"
+						title="NanoScripts proof of work video"
+						data-i18n-title="proof.videoAlt"
+						loading="lazy"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen
+					></iframe>
 				</div>
-				<p class="video-caption"><span class="caption-line"></span><span data-i18n="proof.caption">Standard execution: Playwright UI tests running via Docker.</span></p>
+				<p class="video-caption"><span class="caption-line"></span><span data-i18n="proof.caption">Watch our proof of work.</span></p>
 			</div>
 		</section>
 
